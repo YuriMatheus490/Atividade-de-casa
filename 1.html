@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius para Fahrenheit</title>
+</head>
+<body>
+    <!-- 02. Você está no Brasil, e para temperatura usamos o grau Celsius.
+Porém, quando você for contrato para trabalhar como programador JavaScript 
+no exterior, deverá usar graus Fahrenheit.
+Celsius * 1,8 + 32 = Fahrenheit
+Fahrenheit - 32 * 0,5556-->
+<form action="">
+        Digite a temperatura em graus Celsius: <br/>
+        <input type="number" id="celsius"/>
+        <br/><br/>
+        <button type="button" onclick="calcular()"> Calcular </button>
+    </form>
+    <div id="resposta"></div>
+
+<script>
+    function calcular() {
+        //obter a informação de graus celsius
+        var celsiusj = document.getElementById("celsius").value;
+        //converteu para real
+        celsiusj = parseFloat(celsiusj);
+        //processamento (calcular para fahrenheit)
+        var fah = (celsiusj * 1.8) + 32;
+        
+        //saída
+        var resultado = "Conversão para Fahrenheit é : " + fah + "\n" 
+
+        document.getElementById("resposta").innerHTML = resultado;
+
+
+        //Já tinha feita na aula, refiz em casa com tela.
+
+        }
+</script>
+    
+    
+</body>
+</html>

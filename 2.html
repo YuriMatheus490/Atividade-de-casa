@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit para celsius</title>
+</head>
+<body>
+    <!-- 03. Agora faça o contrário. Você fornece a temperatura em graus Fahrenheit,
+seu programa deve converter para Celsius e exibir na tela a temperatura em 
+graus Celsius.
+Celsius * 1,8 + 32 = Fahrenheit
+Fahrenheit - 32 * 0,5556-->
+    <form action="">
+        Digite a temperatura em graus Fahrenheit: <br/>
+        <input type="number" id="fahrenheit"/>
+        <br/><br/>
+        <button type="button" onclick="calcular()"> Calcular </button>
+    </form>
+    <div id="resposta"></div>
+    <script>
+        function calcular() {
+            var fahj =document.getElementById("fahrenheit").value;
+            fahj = parseFloat(fahj);
+        //processamento 
+        var celsius = (fahj - 32) * 0.5556;
+        
+        //saída
+        var resultado = "Conversão para Celsius é : " + celsius + "<br>" 
+        
+        document.getElementById("resposta").innerHTML = resultado;
+
+
+        //Já tinha feita na aula, refiz em casa com tela.
+        }
+    </script>
+    
+
+    
+</body>
+</html>
